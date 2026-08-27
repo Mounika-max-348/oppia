@@ -7,17 +7,10 @@
       <span>Cloud task name:</span>
     </div>
     <div class="messages-container">
-      <a *ngIf="getCloudTaskConsoleUrl() as cloudTaskUrl; else plainCloudTaskName"
-         [href]="cloudTaskUrl"
-         target="_blank"
-         rel="noopener noreferrer">
-        {{cloudTaskRun.cloudTaskName}}
-      </a>
-      <ng-template #plainCloudTaskName>
-        {{cloudTaskRun.cloudTaskName}}
-      </ng-template>
+      {{cloudTaskRun.cloudTaskName}}
     </div>
   </div>
+
   <div class="data-container">
     <div class="date-type-title">
       <span>Function ID:</span>
@@ -26,6 +19,7 @@
       {{cloudTaskRun.functionId}}
     </div>
   </div>
+
   <div class="data-container">
     <div class="date-type-title">
       <span>Current state:</span>
@@ -34,6 +28,7 @@
       {{cloudTaskRun.latestJobState}}
     </div>
   </div>
+
   <div class="data-container">
     <div class="date-type-title">
       <span>Created on:</span>
@@ -42,6 +37,7 @@
       {{cloudTaskRun.createdOn}}
     </div>
   </div>
+
   <div class="data-container">
     <div class="date-type-title">
       <span>Last updated:</span>
@@ -50,6 +46,7 @@
       {{cloudTaskRun.lastUpdated}}
     </div>
   </div>
+
   <div class="data-container">
     <div class="date-type-title">
       <span>Error messages:</span>
@@ -76,6 +73,7 @@
 <div class="modal-footer">
   <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
 </div>
+
 <style>
   .date-type-title {
     font-weight: bold;
